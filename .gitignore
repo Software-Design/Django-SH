@@ -1,0 +1,4 @@
+__pycache__/
+dist/
+django_sh.egg-info/
+venv/
