@@ -68,7 +68,7 @@ class Command(BaseCommand):
             if os.path.isdir(path):
                 try:
                     self.importModule(f'{path}.models', '*')
-                except (KeyError, ModuleNotFoundError, ValueError):
+                except (ImportError, KeyError, ModuleNotFoundError, ValueError):
                     pass
 
     def importModule(self, module: str, imports: Union[str, Tuple[str], None]):
